@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
 import "./style.css";
+import { Clock } from "../Clock";
+
 
 export const Form = ({ calculateResult, result }) => {
 
@@ -14,8 +16,9 @@ export const Form = ({ calculateResult, result }) => {
     }
     return (
         <form className="form" onSubmit={onSubmit}>
-            <label className="form__label"><span className="form__labelText" for="baseCurrencyID">Wpisz kwotę w PLN:</span><br></br>
-                <select id="baseCurrencyID" name="baseCurrency">
+            <Clock></Clock>
+            <label className="form__label"><span className="form__labelText">Wpisz kwotę w PLN:</span><br></br>
+                <select >
                     <option value="pln" selected>PLN</option>
                 </select>
             </label>
@@ -31,7 +34,7 @@ export const Form = ({ calculateResult, result }) => {
                     required
                 />
             </label>
-            <label for="futureCurrencyID" className="form__label"> <span className="form__labelText">Wybierz walute, na
+            <label className="form__label"> <span className="form__labelText">Wybierz walute, na
                 która chcesz
                 zamienić:</span><br></br>
                 <select
@@ -48,7 +51,7 @@ export const Form = ({ calculateResult, result }) => {
                     )))}
                 </select>
             </label>
-            <input type="number" name="futureCurrencyValue" placeholder="Otrzymam"
+            <input type="number"  placeholder="Otrzymam"
                 value="" disabled />
 
             <div className="button__row">

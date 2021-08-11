@@ -5,6 +5,7 @@ import { Form } from "./Form";
 import Footer from "./Footer";
 import { currencies } from "./currencies";
 
+
 function App() {
 
   const [result, setResult] = useState();
@@ -23,6 +24,7 @@ function App() {
   return (
     <Container>
       <Header title="Currency Exchange" description="live, fast, easy"> </Header>
+      
       <Form
         result={result}
         calculateResult={calculateResult}
