@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Container from "./Container";
+import Header from "./Header";
+import { Form } from "./Form";
+import Footer from "./Footer";
+import { currencies } from "./currencies";
 
 function App() {
+
+  const [result, setResult] = useState();
+
+  const calculateResult = (currency, amount) => {
+    const rate = currencies
+      .find(({ short }) => short === currency)
+      .rate;
+    setResult({
+      sourceAmount: +amount,
+      targetAmount: amount / rate,
+      currency,
+    });
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header title="Currency Exchange" description="live, fast, easy"> </Header>
+      <Form
+        result={result}
+        calculateResult={calculateResult}
+      ></Form>
+      <Footer></Footer>
+    </Container>
   );
 }
 
