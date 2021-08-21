@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
-import "./style.css";
 import { Clock } from "../Clock";
+import { Wrapper, Label, LabelText, Buttons, Button } from "./styled";
 
 
 export const Form = ({ calculateResult, result }) => {
@@ -15,14 +15,18 @@ export const Form = ({ calculateResult, result }) => {
         calculateResult(currency, amount);
     }
     return (
-        <form className="form" onSubmit={onSubmit}>
+        <Wrapper onSubmit={onSubmit}>
             <Clock></Clock>
-            <label className="form__label"><span className="form__labelText">Wpisz kwotę w PLN:</span><br></br>
+            <Label>
+                <LabelText>
+                    Wpisz kwotę w PLN:
+                </LabelText>
+                <br></br>
                 <select >
                     <option value="pln" selected>PLN</option>
                 </select>
-            </label>
-            <label className="form__label">
+            </Label>
+            <Label >
                 <input
                     type="number"
                     value={amount}
@@ -33,10 +37,10 @@ export const Form = ({ calculateResult, result }) => {
                     placeholder="Mam"
                     required
                 />
-            </label>
-            <label className="form__label"> <span className="form__labelText">Wybierz walute, na
+            </Label>
+            <Label> <LabelText>Wybierz walute, na
                 która chcesz
-                zamienić:</span><br></br>
+                zamienić:</LabelText><br></br>
                 <select
                     value={currency}
                     onChange={({ target }) => setCurrency(target.value)}
@@ -50,16 +54,16 @@ export const Form = ({ calculateResult, result }) => {
                         </option>
                     )))}
                 </select>
-            </label>
-            <input type="number"  placeholder="Otrzymam"
+            </Label>
+            <input type="number" placeholder="Otrzymam"
                 value="" disabled />
 
-            <div className="button__row">
-                <button className="form__button" >Oblicz</button>
-                <button className="form__button" type="reset">Zresetuj </button>
-            </div>
+            <Buttons>
+                <Button>Oblicz</Button>
+                <Button type="reset">Zresetuj </Button>
+            </Buttons>
             <Result result={result} />
-        </form>
+        </Wrapper>
 
 
     )

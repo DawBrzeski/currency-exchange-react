@@ -1,7 +1,7 @@
-import "./style.css";
+import {Wrapper} from "./styled";
 
 const Footer = () => 
-<div className="footer">
+<Wrapper>
 <p>Copyright @ D.B</p>
-</div>
+</Wrapper>
 export default Footer; 

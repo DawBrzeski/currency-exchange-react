@@ -1,12 +1,12 @@
-import "./style.css";
+import { Wrapper } from "./styled";
 
 export const Result = ({ result }) => (
-    <p className="section__paragraph">
+    <Wrapper>
         Otrzymasz:&nbsp;  
         {result !== undefined && (
             <strong>
                 {result.targetAmount.toFixed(2)}&nbsp;{result.currency}
             </strong>
         )}
-    </p>
+    </Wrapper>
 );

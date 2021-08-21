@@ -1,11 +1,11 @@
-import "./style.css";
+import { Description, Title, Wrapper } from "./styled";
 
 const Header = ({title, description}) =>
 
-<header className="header">
-<h1 className="header__title"> {title} </h1>
-<p className="hedaer__desription"> {description} </p>
-</header>
+<Wrapper>
+<Title> {title} </Title>
+<Description> {description} </Description>
+</Wrapper>
 
 
 export default Header;
