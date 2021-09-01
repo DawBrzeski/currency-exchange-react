@@ -3,17 +3,17 @@ import Container from "./Container";
 import Header from "./Header";
 import { Form } from "./Form";
 import Footer from "./Footer";
-import { currencies } from "./currencies";
+import {useRatesData} from ".//Form/useRatesData"; 
 
 
 function App() {
 
   const [result, setResult] = useState();
+  const ratesData = useRatesData();
 
   const calculateResult = (currency, amount) => {
-    const rate = currencies
-      .find(({ short }) => short === currency)
-      .rate;
+    const rate = ratesData.rates[currency];
+      
     setResult({
       sourceAmount: +amount,
       targetAmount: amount / rate,

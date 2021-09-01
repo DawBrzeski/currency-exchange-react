@@ -7,3 +7,11 @@ export const Wrapper = styled.p`
     padding-top: 40px; 
 
 `;
+
+export const Loading = styled.p`
+    color: crimson;
+`;
+
+export const Failure = styled.p`
+    color: crimson;
+`;
