@@ -25,10 +25,8 @@ max-width: 300px;
 `;
 
 export const Buttons = styled.div`
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
+    margin-top: 50px;
+    text-align: center;
 
 `;
 
@@ -37,6 +35,7 @@ export const Button = styled.button`
     background-color: pink;
     padding: 10px 0;
     box-shadow: 0px 5px 19px -6px #BCBCBC;
+    text-align: center;
 
 &:hover {
     background-color: rgba(252, 157, 193, 0.822);
