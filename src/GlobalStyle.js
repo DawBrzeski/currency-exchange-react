@@ -8,7 +8,7 @@ html {
     box-sizing:inherit;
 }
 body{
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     margin: auto;
     text-align: center;
     min-width: none;
