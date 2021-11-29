@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# Przelicznik walut / Currency exchange  
+Projekt zrobiony na potrzeby szkoły programowania YouCode.pl 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Demo: 
+https://dawbrzeski.github.io/currrency-exchange-react/
+## Technology: 
+-CSS (BEM)
+-JS ES6+ features
 
 ## Available Scripts
 
