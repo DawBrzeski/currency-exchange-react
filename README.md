@@ -4,8 +4,8 @@ Projekt zrobiony na potrzeby szkoły programowania YouCode.pl
 # Demo: 
 https://dawbrzeski.github.io/currrency-exchange-react/
 ## Technology: 
--CSS (BEM)
--JS ES6+ features
+- CSS (BEM)
+- JS ES6+ features
 
 ## Available Scripts
 
