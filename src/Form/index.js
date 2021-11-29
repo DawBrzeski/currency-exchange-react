@@ -55,7 +55,8 @@ export const Form = ({ calculateResult, result }) => {
                                 która chcesz
                                 zamienić:</LabelText><br></br>
                                 <select
-                                    defaultValue="EUR"
+                                defaultValue="EUR"
+                                    value={currency}
                                     onChange={({ target }) => setCurrency(target.value)}
                                 >
                                     {Object.keys(ratesData.rates).map(((currency) => (
